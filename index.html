@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ZASS COFFEE</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f1ea;
+			display: flex;
+			justify-content:  center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+		}
+		.login-box {
+			background: white;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+			width: 300px;
+			text-align: center;
+		}
+		input {
+			width: 90%;
+			padding: 10px;
+			margin: 10px 0;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		input[type="submit"] {
+			background-color: #6f4e37;
+			color: white;
+			border: none;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		input[type="submit"]:hover {
+			background-color: #5a3e2b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="login-box">
+	<h1>ZUPZAPZUPPZAP</h1>
+	<h3>Login Page</h>
+
+	<form id="loginForm">
+		<div>
+	<input type="text" id="username" placeholder = "Enter your username" required>
+		</div>
+		<div>
+	<input type="password" id="password" placeholder = "Enter your password" required>
+		</div>
+		<div>
+	<input type="submit" value = "Login">
+		</div>
+	</form>
+</div>				
+
+<script>
+	document.getElementById("loginForm").addEventListener("submit", function(event) {
+		event.preventDefault();
+		const user = document.getElementById("username").value;
+		localStorage.setItem("zassUser",user);
+		window.location.href="home.html";
+	});
+</script>
+
+</body>
+</html>
